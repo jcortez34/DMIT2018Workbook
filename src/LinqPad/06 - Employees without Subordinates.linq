@@ -1,6 +1,6 @@
 <Query Kind="Expression">
   <Connection>
-    <ID>9f795fec-6525-43c5-bbd0-2819df27768a</ID>
+    <ID>b5c596cc-b08b-4f56-8b29-bee27cfd44dc</ID>
     <Persist>true</Persist>
     <Server>.</Server>
     <Database>WestWind</Database>
@@ -9,10 +9,11 @@
 
 // List all the employees who do not manage anyone.
 from person in Employees
-//   thing      thing[] 
+//   Employee      Table<Employee>
 where person.ReportsToChildren.Count == 0
-//     thing    thing[]
+//     Employee    IEnumerable<Employee>
 select new
 {
-  Name = person.FirstName + " " + person.LastName
+  Name = person.FirstName + " " + person.LastName,
+  Manager = person.ReportsToEmployee.FirstName + " " + person.ReportsToEmployee.LastName
 }
