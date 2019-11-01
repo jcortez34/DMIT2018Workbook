@@ -53,7 +53,7 @@ namespace WebApp.Admin.Security
                 if(result.Succeeded)
                 {
                     var userId = userManager.FindByName(user.UserName).Id;
-                    userManager.AddToRole(userId, "RegisteredUsers");
+                    userManager.AddToRole(userId, "Registered Users");
                 }
             }
 
