@@ -6,7 +6,7 @@ namespace DemoSystem.Entities
     using System.Linq;
     using DemoSystem.Entities;
 
-    public partial class DemoContext : DbContext
+    internal partial class DemoContext : DbContext
     {
         public DemoContext()
             : base("name=DemoContext")

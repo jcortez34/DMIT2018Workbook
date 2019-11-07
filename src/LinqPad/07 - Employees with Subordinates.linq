@@ -1,6 +1,6 @@
 <Query Kind="Expression">
   <Connection>
-    <ID>b5c596cc-b08b-4f56-8b29-bee27cfd44dc</ID>
+    <ID>a1c24afb-9d45-4007-89ec-e11e5d82dc7e</ID>
     <Persist>true</Persist>
     <Server>.</Server>
     <Database>WestWind</Database>
@@ -15,6 +15,6 @@ where person.ReportsToChildren.Count > 0
 select new
 {
   Name = person.FirstName + " " + person.LastName,
-  Subordinates = from sub in person.ReportsToChildren 
-  				 select sub.FirstName + " " + sub.LastName
+  Subordinates = from sub in person.ReportsToChildren
+                 select sub.FirstName + " " + sub.LastName
 }
